@@ -1,0 +1,6 @@
+.hero__logo,
+.portfolio__logo,
+.footer__logo {
+  width: 50px;
+  height: auto;
+}
