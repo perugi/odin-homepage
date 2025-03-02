@@ -233,8 +233,11 @@ div:has(> .footer__mail) {
 
 @media (min-width: 800px) {
   .container {
-    margin: 9rem 4rem;
-    margin-bottom: 0;
+    margin: 4rem;
+  }
+
+  .hero.container {
+    margin-top: 9rem;
   }
 
   .hero__background {
@@ -285,7 +288,6 @@ div:has(> .footer__mail) {
 
   .portfolio__content {
     grid-template-columns: repeat(2, 1fr);
-    border: 1px solid red;
   }
 
   footer {
