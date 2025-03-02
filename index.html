@@ -3,20 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <header class="hero">
-      <img src="img/header.jpeg" alt="" class="hero__img" />
-      <div class="hero__content">
-        <h1 class="hero__title">About me</h1>
-        <p class="hero__text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt in
-          minima porro incidunt aperiam doloribus quae possimus id quod
-          voluptatibus! Possimus itaque ratione aliquid odio et magnam iusto
-          expedita perferendis.
-        </p>
+    <div class="hero__background"></div>
+    <header class="hero container">
+      <div class="hero__img-container">
+        <img src="img/header_cropped.jpeg" alt="" class="hero__img" />
+        <h1 class="hero__name">Dominik<br />Perusko</h1>
+      </div>
+      <h1 class="hero__title">About me</h1>
+      <p class="hero__text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt in
+        minima porro incidunt aperiam doloribus quae possimus id quod
+        voluptatibus! Possimus itaque ratione aliquid odio et magnam iusto
+        expedita perferendis.
+      </p>
+      <div class="hero__links">
         <a
           href="https://github.com/perugi"
           class="hero__link--gh"
@@ -37,220 +47,268 @@
         </a>
       </div>
     </header>
-    <main class="portfolio">
+    <main class="portfolio container">
       <h1 class="portfolio__title">My work</h1>
       <div class="portfolio__content">
         <div class="portfolio-item">
-          <img src="img/battleship.jpg" alt="" class="portfolio-item__img" />
-          <h2 class="portfolio-item__title">Battleship</h2>
-          <a
-            class="portfolio-item__gh-link"
-            href="https://github.com/perugi/battleship"
-            aria-label="Battleship GitHub"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="portfolio__logo" src="img/gh_logo.svg" alt="" />
-          </a>
-          <a
-            class="portfolio-item__live-link"
-            href="https://perugi.github.io/battleship/"
-            aria-label="Battleship Live Demo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="portfolio__logo" src="img/link.svg" alt="" />
-          </a>
-          <p class="portfolio-item__text">
-            An implementation of the classic Battleship game in Vanilla HTML,
-            CSS and JavaScript.
-          </p>
+          <div class="portfolio-item__img-container">
+            <img src="img/battleship.png" alt="" class="portfolio-item__img" />
+          </div>
+          <div>
+            <div class="portfolio-item__bar">
+              <h2 class="portfolio-item__title">Battleship</h2>
+              <a
+                class="portfolio-item__gh-link"
+                href="https://github.com/perugi/battleship"
+                aria-label="Battleship GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="portfolio__logo" src="img/gh_logo.svg" alt="" />
+              </a>
+              <a
+                class="portfolio-item__live-link"
+                href="https://perugi.github.io/battleship/"
+                aria-label="Battleship Live Demo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="portfolio__logo" src="img/link.svg" alt="" />
+              </a>
+            </div>
+            <p class="portfolio-item__text">
+              An implementation of the classic Battleship game in Vanilla HTML,
+              CSS and JavaScript.
+            </p>
+          </div>
         </div>
         <div class="portfolio-item">
-          <img
-            src="img/weather-forecast.jpg"
-            alt=""
-            class="portfolio-item__img"
-          />
-          <h2 class="portfolio-item__title">Weather Forecast</h2>
-          <a
-            class="portfolio-item__gh-link"
-            href="https://github.com/perugi/weather-forecast"
-            aria-label="Weather Forecast GitHub"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="portfolio__logo" src="img/gh_logo.svg" alt="" />
-          </a>
-          <a
-            class="portfolio-item__live-link"
-            href="https://perugi.github.io/weather-forecast/"
-            aria-label="Weather Forecast Live Demo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="portfolio__logo" src="img/link.svg" alt="" />
-          </a>
-          <p class="portfolio-item__text">
-            A current weather and forecast web app, based on data from
-            https://www.weatherapi.com/
-          </p>
+          <div class="portfolio-item__img-container">
+            <img
+              src="img/weather-forecast.png"
+              alt=""
+              class="portfolio-item__img"
+            />
+          </div>
+          <div>
+            <div class="portfolio-item__bar">
+              <h2 class="portfolio-item__title">Weather Forecast</h2>
+              <a
+                class="portfolio-item__gh-link"
+                href="https://github.com/perugi/weather-forecast"
+                aria-label="Weather Forecast GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="portfolio__logo" src="img/gh_logo.svg" alt="" />
+              </a>
+              <a
+                class="portfolio-item__live-link"
+                href="https://perugi.github.io/weather-forecast/"
+                aria-label="Weather Forecast Live Demo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="portfolio__logo" src="img/link.svg" alt="" />
+              </a>
+            </div>
+            <p class="portfolio-item__text">
+              A current weather and forecast web app, based on data from an API.
+            </p>
+          </div>
         </div>
         <div class="portfolio-item">
-          <img src="img/todo-list.jpg" alt="" class="portfolio-item__img" />
-          <h2 class="portfolio-item__title">Todo List</h2>
-          <a
-            class="portfolio-item__gh-link"
-            href="https://github.com/perugi/todo-list"
-            aria-label="Todo List GitHub"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="portfolio__logo" src="img/gh_logo.svg" alt="" />
-          </a>
-          <a
-            class="portfolio-item__live-link"
-            href="https://perugi.github.io/todo-list/"
-            aria-label="Todo List Live Demo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="portfolio__logo" src="img/link.svg" alt="" />
-          </a>
-          <p class="portfolio-item__text">
-            A todo list application, built with vanilla JS and CS, using
-            localStorage to save the data between the sessions.
-          </p>
+          <div class="portfolio-item__img-container">
+            <img src="img/todo-list.png" alt="" class="portfolio-item__img" />
+          </div>
+          <div>
+            <div class="portfolio-item__bar">
+              <h2 class="portfolio-item__title">Todo List</h2>
+              <a
+                class="portfolio-item__gh-link"
+                href="https://github.com/perugi/todo-list"
+                aria-label="Todo List GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="portfolio__logo" src="img/gh_logo.svg" alt="" />
+              </a>
+              <a
+                class="portfolio-item__live-link"
+                href="https://perugi.github.io/todo-list/"
+                aria-label="Todo List Live Demo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="portfolio__logo" src="img/link.svg" alt="" />
+              </a>
+            </div>
+            <p class="portfolio-item__text">
+              A todo list application, built with vanilla JS and CS, using
+              localStorage to save the data between the sessions.
+            </p>
+          </div>
         </div>
         <div class="portfolio-item">
-          <img
-            src="img/restaurant-page.jpg"
-            alt=""
-            class="portfolio-item__img"
-          />
-          <h2 class="portfolio-item__title">Restaurant Page</h2>
-          <a
-            class="portfolio-item__gh-link"
-            href="https://github.com/perugi/restaurant-page"
-            aria-label="Restaurant Page GitHub"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="portfolio__logo" src="img/gh_logo.svg" alt="" />
-          </a>
-          <a
-            class="portfolio-item__live-link"
-            href="https://perugi.github.io/restaurant-page/"
-            aria-label="Restaurant Page Live Demo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="portfolio__logo" src="img/link.svg" alt="" />
-          </a>
-          <p class="portfolio-item__text">
-            A webpage for a restaurant, built in order to practice with DOM
-            manipulation, webpack and the use of modules.
-          </p>
+          <div class="portfolio-item__img-container">
+            <img
+              src="img/restaurant-page.png"
+              alt=""
+              class="portfolio-item__img"
+            />
+          </div>
+          <div>
+            <div class="portfolio-item__bar">
+              <h2 class="portfolio-item__title">Restaurant Page</h2>
+              <a
+                class="portfolio-item__gh-link"
+                href="https://github.com/perugi/restaurant-page"
+                aria-label="Restaurant Page GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="portfolio__logo" src="img/gh_logo.svg" alt="" />
+              </a>
+              <a
+                class="portfolio-item__live-link"
+                href="https://perugi.github.io/restaurant-page/"
+                aria-label="Restaurant Page Live Demo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="portfolio__logo" src="img/link.svg" alt="" />
+              </a>
+            </div>
+            <p class="portfolio-item__text">
+              A webpage for a restaurant, built in order to practice with DOM
+              manipulation, webpack and the use of modules.
+            </p>
+          </div>
         </div>
         <div class="portfolio-item">
-          <img src="img/library.jpg" alt="" class="portfolio-item__img" />
-          <h2 class="portfolio-item__title">Library</h2>
-          <a
-            class="portfolio-item__gh-link"
-            href="https://github.com/perugi/library"
-            aria-label="Library GitHub"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="portfolio__logo" src="img/gh_logo.svg" alt="" />
-          </a>
-          <a
-            class="portfolio-item__live-link"
-            href="https://perugi.github.io/library/"
-            aria-label="Library Live Demo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="portfolio__logo" src="img/link.svg" alt="" />
-          </a>
-          <p class="portfolio-item__text">
-            A library application for management of book cards.
-          </p>
+          <div class="portfolio-item__img-container">
+            <img src="img/library.png" alt="" class="portfolio-item__img" />
+          </div>
+          <div>
+            <div class="portfolio-item__bar">
+              <h2 class="portfolio-item__title">Library</h2>
+              <a
+                class="portfolio-item__gh-link"
+                href="https://github.com/perugi/library"
+                aria-label="Library GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="portfolio__logo" src="img/gh_logo.svg" alt="" />
+              </a>
+              <a
+                class="portfolio-item__live-link"
+                href="https://perugi.github.io/library/"
+                aria-label="Library Live Demo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="portfolio__logo" src="img/link.svg" alt="" />
+              </a>
+            </div>
+            <p class="portfolio-item__text">
+              A library application for management of book cards.
+            </p>
+          </div>
         </div>
         <div class="portfolio-item">
-          <img src="img/tic-tac-toe.jpg" alt="" class="portfolio-item__img" />
-          <h2 class="portfolio-item__title">Tic-Tac-Toe</h2>
-          <a
-            class="portfolio-item__gh-link"
-            href="https://github.com/perugi/tic-tac-toe"
-            aria-label="Tic-Tac-Toe GitHub"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="portfolio__logo" src="img/gh_logo.svg" alt="" />
-          </a>
-          <a
-            class="portfolio-item__live-link"
-            href="https://perugi.github.io/tic-tac-toe"
-            aria-label="Tic-Tac-Toe Live Demo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img class="portfolio__logo" src="img/link.svg" alt="" />
-          </a>
-          <p class="portfolio-item__text">
-            A tic-tac-toe website, built with vanilla JS and CS. Built in order
-            to practice with clean design and the revealing module and factory
-            functions patterns.
-          </p>
+          <div class="portfolio-item__img-container">
+            <img src="img/tic-tac-toe.png" alt="" class="portfolio-item__img" />
+          </div>
+          <div>
+            <div class="portfolio-item__bar">
+              <h2 class="portfolio-item__title">Tic-Tac-Toe</h2>
+              <a
+                class="portfolio-item__gh-link"
+                href="https://github.com/perugi/tic-tac-toe"
+                aria-label="Tic-Tac-Toe GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="portfolio__logo" src="img/gh_logo.svg" alt="" />
+              </a>
+              <a
+                class="portfolio-item__live-link"
+                href="https://perugi.github.io/tic-tac-toe"
+                aria-label="Tic-Tac-Toe Live Demo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="portfolio__logo" src="img/link.svg" alt="" />
+              </a>
+            </div>
+            <p class="portfolio-item__text">
+              A tic-tac-toe website, built with vanilla JS and CS. Built in
+              order to practice with clean design and the revealing module and
+              factory functions patterns.
+            </p>
+          </div>
         </div>
       </div>
     </main>
     <footer class="footer">
-      <h1 class="footer__title">Contact me</h1>
-      <p class="footer__text">
-        Please get in touch if you think our work could be mutually beneficial!
-      </p>
-      <p class="footer__address">
-        1234 Random Road<br />Random Town, California 12345
-      </p>
-      <img
-        src="img/phone.svg"
-        alt=""
-        class="footer__logo footer__logo--phone"
-      />
-      <p class="footer__phone">+1 234 567 890</p>
-      <img src="img/mail.svg" alt="" class="footer__logo footer__logo--mail" />
-      <a
-        class="footer__email"
-        href="mailto:dominik.perusko@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        >dominik.perusko@gmail.com</a
-      >
-      <a
-        href="https://github.com/perugi"
-        class="footer__link--gh"
-        aria-label="GitHub"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          class="footer__logo footer__logo-gh"
-          src="img/gh_logo.svg"
-          alt=""
-        />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/dominik-perusko-37575a174/"
-        class="footer__link--ln"
-        aria-label="LinkedIn"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="img/ln_logo.svg" alt="" class="footer__logo footer___" />
-      </a>
-      <img src="img/footer.jpeg" alt="" class="footer__img" />
+      <div class="container">
+        <h1 class="footer__title">Contact me</h1>
+        <p class="footer__text">
+          Please get in touch if you think our work could be mutually
+          beneficial!
+        </p>
+        <p class="footer__address">
+          1234 Random Road<br />Random Town, California 12345
+        </p>
+        <div>
+          <img
+            src="img/phone.svg"
+            alt=""
+            class="footer__logo footer__logo--phone"
+          />
+          <p class="footer__phone">+1 234 567 890</p>
+        </div>
+        <div>
+          <img
+            src="img/mail.svg"
+            alt=""
+            class="footer__logo footer__logo--mail"
+          />
+          <a
+            class="footer__mail"
+            href="mailto:dominik.perusko@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            >dominik.perusko@gmail.com</a
+          >
+        </div>
+        <div class="footer__links">
+          <a
+            href="https://github.com/perugi"
+            class="footer__link--gh"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="footer__logo footer__logo-gh"
+              src="img/gh_logo.svg"
+              alt=""
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/dominik-perusko-37575a174/"
+            class="footer__link--ln"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="img/ln_logo.svg" alt="" class="footer__logo footer___" />
+          </a>
+        </div>
+      </div>
     </footer>
+    <img src="img/footer_cropped.jpeg" alt="" class="footer__img" />
   </body>
 </html>

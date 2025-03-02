@@ -1,8 +1,250 @@
 @import "/node_modules/@perugi/css-reset/reset.css";
 
+:root {
+  --gray-text: rgb(86, 86, 86);
+  --background-highlight: rgb(8, 145, 178);
+}
+
+/*** TYPOGRAPHY & COLORS ***/
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1.hero__name {
+  font-size: clamp(2rem, 15vw, 9rem);
+  line-height: 1.2;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: min(12vw, 4rem);
+}
+
+h2 {
+  font-size: min(6vw, 2rem);
+}
+
+.hero__background {
+  background-color: var(--background-highlight);
+}
+
+.hero__text {
+  color: var(--gray-text);
+}
+
+.hero__text,
+.footer__text {
+  font-size: min(6vw, 2rem);
+}
+
+.portfolio-item {
+  box-shadow: 0px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item__img-container:has(img[src="img/battleship.png"]) {
+  background: #db7777;
+}
+
+.portfolio-item__img-container:has(img[src="img/weather-forecast.png"]) {
+  background: #77bcd7;
+}
+
+.portfolio-item__img-container:has(img[src="img/todo-list.png"]) {
+  background: #83c183;
+}
+
+.portfolio-item__img-container:has(img[src="img/restaurant-page.png"]) {
+  background: #e66422;
+}
+
+.portfolio-item__img-container:has(img[src="img/library.png"]) {
+  background: #0477ff;
+}
+
+.portfolio-item__img-container:has(img[src="img/tic-tac-toe.png"]) {
+  background: #d73c60;
+}
+
+.portfolio-item__text {
+  color: var(--gray-text);
+}
+
+.portfolio-item__text,
+.footer__address,
+.footer__phone,
+.footer__mail {
+  font-size: min(5vw, 1.5rem);
+}
+
+.footer {
+  background-color: var(--background-highlight);
+  color: white;
+}
+
+.footer__mail {
+  color: white;
+}
+
+/*** LAYOUT ***/
+
+.hero__background {
+  position: absolute;
+  z-index: -1;
+  height: 120vw;
+  width: 200vw;
+  transform: translateX(-50vw) translateY(-50vw) rotate(-25deg);
+}
+
 .hero__logo,
-.portfolio__logo,
 .footer__logo {
   width: 50px;
   height: auto;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: min(5vw, 3rem);
+  margin-bottom: 0;
+}
+
+.hero__img-container {
+  position: relative;
+  padding: 1rem;
+}
+
+.hero__name {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.hero__links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.portfolio__content {
+  display: grid;
+  gap: 2rem;
+}
+
+.portfolio-item {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.portfolio-item__img-container {
+  display: none;
+  width: 100%;
+  aspect-ratio: 1 / 0.8;
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-item__img-container + div {
+  padding: 2rem;
+}
+
+.portfolio-item__bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.portfolio-item__title {
+  margin: 0 auto 0 1rem;
+}
+
+.portfolio__logo {
+  width: 2rem;
+  height: auto;
+}
+
+.portfolio-item__text {
+  margin-top: 1rem;
+  min-height: 10rem;
+}
+
+.footer__title {
+  margin-top: 1rem;
+}
+
+.footer__text {
+  margin-top: 1rem;
+}
+
+.footer__address {
+  margin: 2rem 0;
+}
+
+div:has(> .footer__phone),
+div:has(> .footer__mail) {
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo--phone,
+.footer__logo--mail {
+  display: none;
+}
+
+.footer__links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.footer__img {
+}
+
+/*** BREAKPOINTS ***/
+
+@media (max-width: 400px) {
+  .portfolio-item__text {
+    min-height: 8rem;
+  }
+}
+
+/* @media (min-width: 600px) {
+  .hero {
+    background-color: white;
+    box-shadow: 0px 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .hero__img {
+    max-width: 50%;
+    float: left;
+    position: relative;
+  }
+
+  .portfolio__content {
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid red;
+  }
+     }*/
