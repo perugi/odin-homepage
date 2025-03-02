@@ -146,14 +146,13 @@ h1 {
   margin-bottom: 6rem;
 }
 
-.portfolio__content {
-  display: grid;
-  gap: 2rem;
+.portfolio__title {
+  margin-bottom: 2rem;
 }
 
-.portfolio-item {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+.portfolio__content {
+  display: grid;
+  gap: 4rem;
 }
 
 .portfolio-item__img-container {
@@ -217,9 +216,6 @@ div:has(> .footer__mail) {
   justify-content: center;
   gap: 2rem;
   margin-bottom: 4rem;
-}
-
-.footer__img {
 }
 
 /*** BREAKPOINTS ***/
