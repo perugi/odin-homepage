@@ -268,8 +268,8 @@ div:has(> .footer__mail) {
   }
 
   .hero__background {
-    height: 700px;
-    transform: translateX(0) translateY(-200px) rotate(-15deg);
+    height: 5000px;
+    transform: translateX(-500px) translateY(-4500px) rotate(-15deg);
   }
 
   .hero {
