@@ -15,44 +15,47 @@
   <body>
     <div class="hero__background"></div>
     <header class="hero container">
-      <div class="hero__img-container">
-        <picture class="hero__img">
-          <source
-            media="(max-width: 1199px)"
-            srcset="img/header_cropped.jpeg"
-          />
-          <source media="(min-width: 1200px)" srcset="img/header.jpeg" />
-          <img src="img/header_cropped.jpeg" alt="" />
-        </picture>
+      <div class="hero__img-container--desktop">
+        <img src="img/header_cropped.jpeg" alt="" class="hero__img--desktop" />
         <h1 class="hero__name">Dominik Perusko</h1>
       </div>
-      <h1 class="hero__title">About me</h1>
-      <p class="hero__text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam similique
-        temporibus provident nulla doloremque aliquam deserunt, commodi iusto,
-        inventore, eum ipsum odit corrupti maxime necessitatibus? Deleniti dolor
-        dolores ipsam, ipsa molestias officiis similique asperiores nobis, est
-        necessitatibus esse nulla quo molestiae fuga soluta.
-      </p>
-      <div class="hero__links">
-        <a
-          href="https://github.com/perugi"
-          class="hero__link--gh"
-          aria-label="GitHub"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img class="hero__logo" src="img/gh_logo.svg" alt="" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/dominik-perusko-37575a174/"
-          class="hero__link--ln"
-          aria-label="LinkedIn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img class="hero__logo" src="img/ln_logo.svg" alt="" />
-        </a>
+      <div class="hero__content">
+        <div class="hero__img-container">
+          <img
+            src="img/header_cropped.jpeg"
+            alt=""
+            class="hero__img--fallback"
+          />
+          <h1 class="hero__name">Dominik Perusko</h1>
+        </div>
+        <h1 class="hero__title">About me</h1>
+        <p class="hero__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam similique
+          temporibus provident nulla doloremque aliquam deserunt, commodi iusto,
+          inventore, eum ipsum odit corrupti maxime necessitatibus? Deleniti
+          dolor dolores ipsam, ipsa molestias officiis similique asperiores
+          nobis, est necessitatibus esse nulla quo molestiae fuga soluta.
+        </p>
+        <div class="hero__links">
+          <a
+            href="https://github.com/perugi"
+            class="hero__link--gh"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img class="hero__logo" src="img/gh_logo.svg" alt="" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/dominik-perusko-37575a174/"
+            class="hero__link--ln"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img class="hero__logo" src="img/ln_logo.svg" alt="" />
+          </a>
+        </div>
       </div>
     </header>
     <main class="portfolio container">

@@ -25,7 +25,11 @@ h2 {
   font-style: normal;
 }
 
-h1.hero__name {
+.hero__img--fallback {
+  box-shadow: 0px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.hero__name {
   font-size: clamp(2rem, 15vw, 9rem);
   line-height: 1.2;
   color: white;
@@ -133,6 +137,10 @@ body {
   height: auto;
 }
 
+.hero__img-container--desktop {
+  display: none;
+}
+
 .hero__img-container {
   position: relative;
   padding: 1rem;
@@ -142,6 +150,7 @@ body {
   position: absolute;
   bottom: 1rem;
   left: 2rem;
+  text-align: left;
 }
 
 h1 {
@@ -258,8 +267,8 @@ div:has(> .footer__mail) {
   }
 
   .hero__background {
-    height: 100vw;
-    transform: translateX(-50vw) translateY(-50vw) rotate(-15deg);
+    height: 700px;
+    transform: translateX(0) translateY(-200px) rotate(-15deg);
   }
 
   .hero {
@@ -279,12 +288,12 @@ div:has(> .footer__mail) {
     margin-right: 1rem;
   }
 
-  h1.hero__name {
+  .hero__name {
     font-size: 4rem;
-    top: 1rem;
+    bottom: auto;
+    top: 0.5rem;
     left: 80%;
     width: 70vw;
-    text-align: left;
   }
 
   h1 {
@@ -301,8 +310,8 @@ div:has(> .footer__mail) {
     justify-content: end;
   }
 
-  portfolio__title {
-    text-align: left;
+  .portfolio__title {
+    align-self: start;
   }
 
   .portfolio__content {
@@ -312,6 +321,9 @@ div:has(> .footer__mail) {
   .footer__background {
     width: 100%;
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer.container {
@@ -329,16 +341,64 @@ div:has(> .footer__mail) {
   }
 
   .footer__title {
+    text-align: left;
     margin-top: 0;
   }
 
   .footer__links {
     margin-bottom: 0;
+    justify-content: start;
   }
 }
 
 @media (min-width: 1150px) {
   .portfolio__content {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero.container {
+    margin-top: 4rem;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero {
+    background: none;
+    box-shadow: none;
+  }
+
+  .hero__content {
+    flex: 1.1;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0px 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero__title {
+    text-align: left;
+  }
+
+  .hero__img-container--desktop {
+    flex: 1;
+    display: block;
+    position: relative;
+    max-width: 450px;
+  }
+
+  .hero__img-container {
+    display: none;
+  }
+
+  .hero__name {
+    font-size: 3rem;
+    top: auto;
+    bottom: 1rem;
+    left: 2rem;
+  }
+
+  .footer.container {
+    gap: 6rem;
   }
 }
