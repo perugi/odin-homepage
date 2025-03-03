@@ -16,17 +16,23 @@
     <div class="hero__background"></div>
     <header class="hero container">
       <div class="hero__img-container">
-        <img src="img/header_cropped.jpeg" alt="" class="hero__img" />
+        <picture class="hero__img">
+          <source
+            media="(max-width: 1199px)"
+            srcset="img/header_cropped.jpeg"
+          />
+          <source media="(min-width: 1200px)" srcset="img/header.jpeg" />
+          <img src="img/header_cropped.jpeg" alt="" />
+        </picture>
         <h1 class="hero__name">Dominik Perusko</h1>
       </div>
       <h1 class="hero__title">About me</h1>
       <p class="hero__text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nulla
-        aperiam rerum distinctio quis facilis necessitatibus non magnam
-        dignissimos modi ipsum consectetur ab saepe mollitia iusto, nostrum
-        placeat? Recusandae, nihil! Excepturi veritatis qui eius vero quod, unde
-        non laboriosam optio voluptatem placeat dicta modi totam nemo
-        necessitatibus voluptate minima temporibus quo incidunt animi quae!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam similique
+        temporibus provident nulla doloremque aliquam deserunt, commodi iusto,
+        inventore, eum ipsum odit corrupti maxime necessitatibus? Deleniti dolor
+        dolores ipsam, ipsa molestias officiis similique asperiores nobis, est
+        necessitatibus esse nulla quo molestiae fuga soluta.
       </p>
       <div class="hero__links">
         <a
@@ -253,64 +259,78 @@
         </div>
       </div>
     </main>
-    <footer class="footer">
-      <div class="container">
-        <h1 class="footer__title">Contact me</h1>
-        <p class="footer__text">
-          Please get in touch if you think our work could be mutually
-          beneficial!
-        </p>
-        <p class="footer__address">
-          1234 Random Road<br />Random Town, California 12345
-        </p>
+    <div class="footer__background">
+      <footer class="footer container">
         <div>
-          <img
-            src="img/phone.svg"
-            alt=""
-            class="footer__logo footer__logo--phone"
-          />
-          <p class="footer__phone">+1 234 567 890</p>
-        </div>
-        <div>
-          <img
-            src="img/mail.svg"
-            alt=""
-            class="footer__logo footer__logo--mail"
-          />
-          <a
-            class="footer__mail"
-            href="mailto:dominik.perusko@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            >dominik.perusko@gmail.com</a
-          >
-        </div>
-        <div class="footer__links">
-          <a
-            href="https://github.com/perugi"
-            class="footer__link--gh"
-            aria-label="GitHub"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <h1 class="footer__title">Contact me</h1>
+          <p class="footer__text">
+            Please get in touch if you think our work could be mutually
+            beneficial!
+          </p>
+          <p class="footer__address">
+            1234 Random Road<br />Random Town, California 12345
+          </p>
+          <div>
             <img
-              class="footer__logo footer__logo-gh"
-              src="img/gh_logo.svg"
+              src="img/phone.svg"
               alt=""
+              class="footer__logo footer__logo--phone"
             />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/dominik-perusko-37575a174/"
-            class="footer__link--ln"
-            aria-label="LinkedIn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="img/ln_logo.svg" alt="" class="footer__logo footer___" />
-          </a>
+            <p class="footer__phone">+1 234 567 890</p>
+          </div>
+          <div>
+            <img
+              src="img/mail.svg"
+              alt=""
+              class="footer__logo footer__logo--mail"
+            />
+            <a
+              class="footer__mail"
+              href="mailto:dominik.perusko@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >dominik.perusko@gmail.com</a
+            >
+          </div>
+          <div class="footer__links">
+            <a
+              href="https://github.com/perugi"
+              class="footer__link--gh"
+              aria-label="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="footer__logo footer__logo-gh"
+                src="img/gh_logo.svg"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dominik-perusko-37575a174/"
+              class="footer__link--ln"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="img/ln_logo.svg"
+                alt=""
+                class="footer__logo footer___"
+              />
+            </a>
+          </div>
         </div>
-      </div>
-      <img src="img/footer_cropped.jpeg" alt="" class="footer__img" />
-    </footer>
+        <picture class="footer__img">
+          <source
+            media="(max-width: 1199px)"
+            srcset="img/footer_cropped.jpeg"
+          />
+          <source media="(min-width: 1200px)" srcset="img/footer.jpeg" />
+          <img src="img/footer_cropped.jpeg" alt="" />
+        </picture>
+      </footer>
+      <img src="img/footer_cropped.jpeg" alt="" class="footer__img--mobile" />
+    </div>
   </body>
 </html>

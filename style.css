@@ -72,7 +72,6 @@ h2 {
 .portfolio-item__img-container:has(img[src="img/restaurant-page.png"]) {
   background: #0060a8;
 }
-
 .portfolio-item__img-container:has(img[src="img/library.png"]) {
   background: white;
 }
@@ -92,7 +91,7 @@ h2 {
   font-size: min(5vw, 1.25rem);
 }
 
-.footer {
+.footer__background {
   background-color: var(--background-highlight);
   color: white;
 }
@@ -103,6 +102,19 @@ h2 {
 
 /*** LAYOUT ***/
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 min(5vw, 3rem);
+  max-width: 1200px;
+}
+
 .hero__background {
   position: absolute;
   z-index: -1;
@@ -111,17 +123,14 @@ h2 {
   transform: translateX(-50vw) translateY(-50vw) rotate(-25deg);
 }
 
+.hero.container {
+  margin-top: 2rem;
+}
+
 .hero__logo,
 .footer__logo {
   width: 50px;
   height: auto;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  margin: min(5vw, 3rem);
-  margin-bottom: 0;
 }
 
 .hero__img-container {
@@ -153,7 +162,7 @@ h1 {
 
 .portfolio__content {
   display: grid;
-  gap: 4rem;
+  gap: 3rem 2rem;
 }
 
 .portfolio-item__img-container {
@@ -192,6 +201,10 @@ h1 {
   min-height: 10rem;
 }
 
+.footer__background {
+  margin-top: 3rem;
+}
+
 .footer__title {
   margin-top: 1rem;
 }
@@ -223,6 +236,10 @@ div:has(> .footer__mail) {
   margin-bottom: 4rem;
 }
 
+.footer__img {
+  display: none;
+}
+
 /*** BREAKPOINTS ***/
 
 @media (max-width: 400px) {
@@ -241,7 +258,7 @@ div:has(> .footer__mail) {
   }
 
   .hero__background {
-    height: 75vw;
+    height: 100vw;
     transform: translateX(-50vw) translateY(-50vw) rotate(-15deg);
   }
 
@@ -279,7 +296,9 @@ div:has(> .footer__mail) {
   }
 
   .hero__links {
+    margin-top: 2rem;
     margin-bottom: 1rem;
+    justify-content: end;
   }
 
   portfolio__title {
@@ -290,18 +309,36 @@ div:has(> .footer__mail) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  footer {
-    display: flex;
-    align-items: center;
+  .footer__background {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer.container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .footer__img--mobile {
+    display: none;
   }
 
   .footer__img {
-    margin: 4rem 4rem 4rem 0;
-    width: 40%;
+    display: block;
+    width: 60%;
   }
 
-  footer > .container {
-    margin: 0 4rem;
-    /* flex: 2; */
+  .footer__title {
+    margin-top: 0;
+  }
+
+  .footer__links {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1150px) {
+  .portfolio__content {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
