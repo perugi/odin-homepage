@@ -1,0 +1,67 @@
+/* Add accessible line-height */
+:root {
+  line-height: 1.5;
+}
+
+/* Remove default margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+ol,
+ul {
+  margin: 0;
+}
+
+/* Remove list styling */
+ol[role="list"],
+ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+/* Reset heading typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Responsive images */
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+/* Avoid text overflows for long words (add hyphen at break) */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Make line wrapping prettier */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
