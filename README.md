@@ -1,17 +1,2 @@
-# npm-template
-
-A template repo for modules, published on npm, with basic setup development dependencies installed.
-
-## Usage:
-
-- Install dependencies: `$ npm install`
-- Change package name, description and git repo in package.json
-- Create module in package.js
-- Change this README file
-- Publish to npm: `$ npm publish --access public`
-
-Install:
-
-```
-$ npm install @perugi/changeme
-```
+# odin-homepage
+A responsive page, based on design briefs for [mobile](https://github.com/perugi/odin-homepage/blob/main/doc/portfolio%20mobile.png?raw=true), [tablet](https://github.com/perugi/odin-homepage/blob/main/doc/portfolio%20tablet.png?raw=true) and [desktop](https://github.com/perugi/odin-homepage/blob/main/doc/portfolio.png?raw=true).
