@@ -12,7 +12,9 @@ body {
   font-style: normal;
   font-variation-settings: "wdth" 100;
   line-height: 1.5;
-  overflow: hidden visible;
+
+  background: no-repeat
+    linear-gradient(-25deg, white 93%, var(--background-highlight) 93%);
 }
 
 h1,
@@ -41,10 +43,6 @@ h1 {
 
 h2 {
   font-size: min(6vw, 2rem);
-}
-
-.hero__background {
-  background-color: var(--background-highlight);
 }
 
 .hero__text {
@@ -105,9 +103,15 @@ h2 {
 
 /*** LAYOUT ***/
 
+html,
 body {
-  width: 100vw;
-  overflow: hidden visible;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,14 +122,6 @@ body {
   flex-direction: column;
   margin: 0 min(5vw, 3rem);
   max-width: 1200px;
-}
-
-.hero__background {
-  position: absolute;
-  z-index: -1;
-  height: 120vw;
-  width: 200vw;
-  transform: translateX(-50vw) translateY(-50vw) rotate(-25deg);
 }
 
 .hero.container {
@@ -259,6 +255,11 @@ div:has(> .footer__mail) {
 }
 
 @media (min-width: 800px) {
+  body {
+    background: no-repeat
+      linear-gradient(-15deg, white 79%, var(--background-highlight) 79%);
+  }
+
   .container {
     margin: 4rem;
   }
